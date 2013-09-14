@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CoffeeStop</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string-array name="shopNames">
+	    <item>Dit e Nat</item>
+	    <item>CafeCafe</item>
+	    <item>Jacksons</item>
+    </string-array>
+	    <string name="name_1">Dit e Nat</string>
+	    <string name="name_2">CafeCafe</string>
+	    <string name="name_3">Jacksons</string>
+	    <string name="txtSurveyIntro">Please select the coffee shop you want to rate.</string>
+	    <string name="txtNext">Next</string>
+	    <string name="txtWelcome">Welcome!</string>
+	    <string name="txtFavShop">Rate your favorite coffee shops!</string>
+	    <string name="txtRateShopBtn">Rate shops!</string>
+	    <string name="txtMapBtn">Go to map!</string>
+	    <string name="txtImgDesc">Taken from the network.</string>
+	    <string name="txtAnswer">Please answer the following questions.</string>
+	    <string name="txtQuestion1">1) On a scale of 1-5, how would you rate the shop\'s quality of service?</string>
+	    <string name="txtQuestion2">2) On a scale of 1-5, how would you rate the shop\'s item quality?</string>
+	    <string name="txtQuestion3">3) On a scale of 1-5, how would you rate the shop\'s taste in music?</string>
+	    <string name="txtQuestion4">4) On a scale of 1-5, how would you rate the shop\'s environment feel?</string>
+	    <string name="txtFinish">Finish!</string>
+
+</resources>
