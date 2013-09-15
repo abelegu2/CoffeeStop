@@ -8,7 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin" >
 
     <TextView
-        android:id="@+id/serviceQuestion"
+        android:id="@+id/txtVWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -21,11 +21,11 @@
         android:id="@+id/itemQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/serviceQuestion"
+        android:layout_below="@+id/txtVWelcome"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:text="@string/txtSurveyIntro"
-        android:textSize="12sp" />
+        android:textSize="13.5sp"/>
 
     <Button
         android:id="@+id/startBtn"
@@ -34,7 +34,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="100dp"
-        android:onClick="startBtnClick"
+        android:onClick="onStartBtnClick"
         android:text="@string/txtNext" />
 
     <RadioGroup
@@ -49,24 +49,21 @@
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_gravity="center"
-            android:text="@string/name_1"
-            android:textSize="12sp" />
+            android:text="@string/name_1"/>
 
         <RadioButton
             android:id="@+id/btn2"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_gravity="center"
-            android:text="@string/name_2"
-            android:textSize="12sp" />
+            android:text="@string/name_2"/>
 
         <RadioButton
             android:id="@+id/btn3"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_gravity="center"
-            android:text="@string/name_3"
-            android:textSize="12sp" />
+            android:text="@string/name_3"/>
 
     </RadioGroup>
 

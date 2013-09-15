@@ -25,5 +25,6 @@
 	    <string name="txtQuestion3">3) On a scale of 1-5, how would you rate the shop\'s taste in music?</string>
 	    <string name="txtQuestion4">4) On a scale of 1-5, how would you rate the shop\'s environment feel?</string>
 	    <string name="txtFinish">Finish!</string>
+	    <string name="imgHelp">Help</string>
 
 </resources>

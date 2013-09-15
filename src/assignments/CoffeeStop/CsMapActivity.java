@@ -76,7 +76,6 @@ public class CsMapActivity extends FragmentActivity
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.cs_main, menu);
 		return true;
 	}
@@ -89,7 +88,7 @@ public class CsMapActivity extends FragmentActivity
     public void onLocationChanged(Location loc) {
     	LatLng latLng = new LatLng(loc.getLatitude(),loc.getLongitude());
     	CameraUpdate camUpdate = CameraUpdateFactory.newLatLngZoom(latLng,15);
-    	gMap.animateCamera(camUpdate);
+    	gMap.animateCamera(camUpdate); //Animate the camera to the location set.
     }
 	
 	@Override

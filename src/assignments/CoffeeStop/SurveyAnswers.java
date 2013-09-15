@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 
 public class SurveyAnswers{
 
-	//Consider making them String from the start, to not make meaningless (as of now) conversions.
 	//Data to be inserted into the tables
+	
 	long id;
 	String coffeeShopName;
 	int firstAnswer;
@@ -17,6 +17,8 @@ public class SurveyAnswers{
 	
 	public SurveyAnswers() {}
 	
+	//Constructor receives all data and saves it into local variables
+	
 	public SurveyAnswers(final String coffeeShopName, final String frstA, final String scndA, final String thrdA, final String frthA) {
 		this.coffeeShopName = coffeeShopName;
 		this.firstAnswer = Integer.parseInt(frstA);
@@ -25,15 +27,17 @@ public class SurveyAnswers{
 		this.fourthAnswer = Integer.parseInt(frthA);
 	}
 	
+	//Saves the data into the database tables
+	
 	public void save(DatabaseHelper dbHelper) {
 		try{
 			final ContentValues values = new ContentValues();
 			
 			values.put(SHOPNAME, this.coffeeShopName);
-			values.put(FIRSTQ, this.firstAnswer);
-			values.put(SECONDQ, this.secondAnswer);
-			values.put(THIRDQ, this.thirdAnswer);
-			values.put(FOURTHQ, this.fourthAnswer);
+			values.put(FIRSTQUESTION, this.firstAnswer);
+			values.put(SECONDQUESTION, this.secondAnswer);
+			values.put(THIRDQUESTION, this.thirdAnswer);
+			values.put(FOURTHQUESTION, this.fourthAnswer);
 			
 			final SQLiteDatabase db = dbHelper.getReadableDatabase();
 			this.id = db.insert(SURVEY_TABLE_NAME, null, values);
@@ -44,9 +48,10 @@ public class SurveyAnswers{
 			e.printStackTrace();
 		}		
 	}
-		
 	
-	public int count(DatabaseHelper dbHelper){
+	//Counts the database rows
+	
+	public int countRows(DatabaseHelper dbHelper){
 		int i=0;
 		
 		String query = "SELECT * FROM "+ SURVEY_TABLE_NAME;
@@ -65,39 +70,8 @@ public class SurveyAnswers{
 			return 0;
 	}
 	
-	public int[] getAverages(DatabaseHelper dbHelper, String name){
-		try{
-			String subQuery = "SELECT * FROM "+SURVEY_TABLE_NAME+" WHERE Name LIKE '" + name +"'";
-			String firstQAvgQuery = "SELECT AVG("+FIRSTQ+") as first, "+
-									"AVG("+SECONDQ+") as second, " + 
-									"AVG("+THIRDQ+") as third, " +
-									"AVG("+FOURTHQ+") as fourth" +
-									" FROM("+subQuery+")";
-			
-			SQLiteDatabase db = dbHelper.getReadableDatabase();
-			
-			Cursor cursor1 = db.rawQuery(firstQAvgQuery, null);
-
-			int[] i = new int[4];
-			
-			if(cursor1.moveToFirst()){
-				i[0]=cursor1.getInt(cursor1.getColumnIndex("first"));
-				i[1]=cursor1.getInt(cursor1.getColumnIndex("second"));
-				i[2]=cursor1.getInt(cursor1.getColumnIndex("third"));
-				i[3]=cursor1.getInt(cursor1.getColumnIndex("fourth"));
-			}
-			
-			db.close();
-			return i;
-		}
-		catch(Exception ei){
-			ei.printStackTrace();
-			return null;
-		}
-	}
+	//Standard getters and setter
 	
-	//Standard getters and setters
-
 	public String getCoffeeShopName() {
 		return coffeeShopName;
 	}
@@ -133,23 +107,25 @@ public class SurveyAnswers{
 		this.fourthAnswer = frthA;
 	}
 	
-	// column names
+	// Column names
+	
 	static final String ID = "ID";
 	static final String SHOPNAME = "Name";
-	static final String FIRSTQ = "Service";
-	static final String SECONDQ = "Item";
-	static final String THIRDQ = "Music";
-	static final String FOURTHQ = "Environment";
+	static final String FIRSTQUESTION= "Service";
+	static final String SECONDQUESTION = "Item";
+	static final String THIRDQUESTION = "Music";
+	static final String FOURTHQUESTION = "Environment";
 	
-	//creating the table
+	// Creating the table
+	
 	public static final String SURVEY_TABLE_NAME = "Answers";	
 	public static final String SURVEY_CREATE_TABLE = "CREATE TABLE " + SurveyAnswers.SURVEY_TABLE_NAME + " ("
 							+ SurveyAnswers.ID + " INTEGER PRIMARY KEY,"
 							+ SurveyAnswers.SHOPNAME + " TEXT,"
-							+ SurveyAnswers.FIRSTQ + " INTEGER,"
-							+ SurveyAnswers.SECONDQ + " INTEGER,"
-							+ SurveyAnswers.THIRDQ + " INTEGER,"
-							+ SurveyAnswers.FOURTHQ + " INTEGER"
+							+ SurveyAnswers.FIRSTQUESTION + " INTEGER,"
+							+ SurveyAnswers.SECONDQUESTION + " INTEGER,"
+							+ SurveyAnswers.THIRDQUESTION + " INTEGER,"
+							+ SurveyAnswers.FOURTHQUESTION + " INTEGER"
 							+ ");";
 
 }

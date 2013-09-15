@@ -9,14 +9,26 @@
         android:layout_height="wrap_content" >
 
 	    <TextView
-	        android:id="@+id/textView0"
+	        android:id="@+id/txtVAnswer"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
 	        android:layout_marginLeft="10dp"
 	        android:layout_marginTop="10dp"
+	        android:layout_centerHorizontal="true"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
 	        android:text="@string/txtAnswer"
-	        android:textAppearance="?android:attr/textAppearanceSmall" />
+	        android:textStyle="bold" />
+	    
+	    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_help"
+        android:contentDescription="@string/imgHelp"
+        android:onClick="onImageBtnClick"/>
 
     </RelativeLayout>
     
@@ -28,8 +40,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/txtQuestion1"
-        android:textSize="12sp" />
+        android:text="@string/txtQuestion1"/>
 
     <RatingBar
         android:id="@+id/ratingBar1"
@@ -48,8 +59,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/txtQuestion2"
-        android:textSize="12sp" />
+        android:text="@string/txtQuestion2"/>
 
     <RatingBar
         android:id="@+id/ratingBar2"
@@ -68,8 +78,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/txtQuestion3"
-        android:textSize="12sp" />
+        android:text="@string/txtQuestion3"/>
 
     <RatingBar
         android:id="@+id/ratingBar3"
@@ -88,8 +97,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/txtQuestion4"
-        android:textSize="12sp" />
+        android:text="@string/txtQuestion4"/>
 
     <RatingBar
         android:id="@+id/ratingBar4"

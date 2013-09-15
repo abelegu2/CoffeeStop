@@ -25,8 +25,7 @@
         android:layout_below="@+id/txtWelcome"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
-        android:text="@string/txtFavShop"
-        android:textSize="12sp" />
+        android:text="@string/txtFavShop" />
 
     <Button
         android:id="@+id/mapButton"

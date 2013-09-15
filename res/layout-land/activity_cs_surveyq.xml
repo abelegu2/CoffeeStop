@@ -25,33 +25,30 @@
 	  		 	
 	            <TextView
 			        android:id="@+id/serviceQuestion"
-			        android:layout_width="230dp"
+			        android:layout_width="300dp"
 			        android:layout_height="wrap_content"
 			        android:gravity="center_horizontal"
-			        android:text="1) On a scale of 1-5, how would you rate the shop&apos;s quality of service?"
-			        android:textSize="12sp" />
+			        android:text="@string/txtQuestion1"/>
 	
 	            <RatingBar
 	                android:id="@+id/ratingBar1"
 	                style="@style/coffeeRatingBar"
-	                android:gravity="center_horizontal"
+	                android:layout_gravity="center_horizontal"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content" />
 	            
 	            <TextView
 			        android:id="@+id/itemQuestion"
-			        android:layout_width="230dp"
+			        android:layout_width="300dp"
 			        android:layout_height="wrap_content"
-			        android:layout_alignLeft="@+id/ratingBar1"
 			        android:gravity="center_horizontal"
-			        android:text="2) On a scale of 1-5, how would you rate the shop&apos;s item quality?"
-			        android:textSize="12sp" />
+			        android:text="@string/txtQuestion2"/>
 	            
 	            <RatingBar
 	                android:id="@+id/ratingBar2"
 	                style="@style/coffeeRatingBar"
 	                android:layout_width="wrap_content"
-	                android:gravity="center_horizontal"
+	                android:layout_gravity="center_horizontal"
 	                android:layout_height="wrap_content" />
 	            
 	        </LinearLayout>
@@ -67,35 +64,33 @@
 	        
 	 		    <TextView
 			        android:id="@+id/environmentQuestion"
-			        android:layout_width="230dp"
+			        android:layout_width="300dp"
 			        android:layout_height="wrap_content"
 			        android:gravity="center_horizontal"
 			        android:layout_marginLeft="20dp"
-			        android:text="3) On a scale of 1-5, how would you rate the shop&apos;s taste in music?"
-			        android:textSize="12sp" />
+			        android:text="@string/txtQuestion3"/>
 	 		    
 	 		    <RatingBar
 	 		        android:id="@+id/ratingBar3"
 	 		        style="@style/coffeeRatingBar"
 	 		        android:layout_width="wrap_content"
 	 		        android:layout_height="wrap_content"
-	 		        android:gravity="center_horizontal" />
+	 		        android:layout_gravity="center_horizontal" />
 	 		    
 	 		    <TextView
 			        android:id="@+id/itemQ"
-			        android:layout_width="230dp"
+			        android:layout_width="300dp"
 			        android:layout_height="wrap_content"
 			        android:gravity="center_horizontal"
 			        android:layout_marginLeft="20dp"
-			        android:text="4) On a scale of 1-5, how would you rate the shop&apos;s environment feel?"
-			        android:textSize="12sp" />
+			        android:text="@string/txtQuestion4"/>
 	 		    
 	 		    <RatingBar
 	 		        android:id="@+id/ratingBar4"
 	 		        style="@style/coffeeRatingBar"
 	 		        android:layout_width="wrap_content"
 	 		        android:layout_height="wrap_content"
-	 		        android:gravity="center_horizontal" />
+	 		        android:layout_gravity="center_horizontal" />
 	 		    
 	        </LinearLayout>
         </LinearLayout>
@@ -109,7 +104,7 @@
 	        android:layout_marginBottom="30dp"
 	        android:layout_centerHorizontal="true"
 	        android:onClick="onFinishBtnClick"
-	        android:text="Finish" />
+	        android:text="@string/txtFinish" />
         
     </RelativeLayout>
     
@@ -120,19 +115,18 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="10dp"
-        android:src="@drawable/ic_help"
-        android:onClick="imageBtnClick"/>
-
-    
+        android:contentDescription="@string/imgHelp"
+        android:onClick="onImageBtnClick"
+        android:src="@drawable/ic_help" />
 
     <TextView
-        android:id="@+id/textView0"
+        android:id="@+id/txtVAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageButton1"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
-        android:text="Please answer the following questions."
+        android:text="@string/txtAnswer"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textStyle="bold" />
 

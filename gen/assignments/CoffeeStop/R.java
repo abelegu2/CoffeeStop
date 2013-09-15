@@ -190,39 +190,40 @@ containing a value of this type.
         public static final int ic_launcher=0x7f02001d;
     }
     public static final class id {
-        public static final int action_settings=0x7f050021;
+        public static final int action_settings=0x7f050022;
         public static final int btn1=0x7f050010;
         public static final int btn2=0x7f050011;
         public static final int btn3=0x7f050012;
-        public static final int btnFinish=0x7f05001c;
-        public static final int environmentQuestion=0x7f05001a;
+        public static final int btnFinish=0x7f05001e;
+        public static final int environmentQuestion=0x7f05001c;
         public static final int hybrid=0x7f050004;
-        public static final int imageButton1=0x7f050020;
+        public static final int imageButton1=0x7f050016;
         public static final int img=0x7f050009;
-        public static final int itemQ=0x7f05001f;
+        public static final int itemQ=0x7f050021;
         public static final int itemQuestion=0x7f05000e;
-        public static final int layoutLeft=0x7f05001d;
-        public static final int layoutRight=0x7f05001e;
+        public static final int layoutLeft=0x7f05001f;
+        public static final int layoutRight=0x7f050020;
         public static final int mainLayout=0x7f05000a;
         public static final int map=0x7f05000c;
         public static final int mapButton=0x7f050007;
-        public static final int musicQuestion=0x7f050018;
+        public static final int musicQuestion=0x7f05001a;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int radioGroup1=0x7f050014;
-        public static final int ratingBar1=0x7f050016;
-        public static final int ratingBar2=0x7f050017;
-        public static final int ratingBar3=0x7f050019;
-        public static final int ratingBar4=0x7f05001b;
+        public static final int ratingBar1=0x7f050018;
+        public static final int ratingBar2=0x7f050019;
+        public static final int ratingBar3=0x7f05001b;
+        public static final int ratingBar4=0x7f05001d;
         public static final int relLayout1=0x7f05000b;
         public static final int satellite=0x7f050002;
-        public static final int serviceQuestion=0x7f05000d;
+        public static final int serviceQuestion=0x7f050017;
         public static final int startBtn=0x7f05000f;
         public static final int surveyButton=0x7f050008;
         public static final int terrain=0x7f050003;
-        public static final int textView0=0x7f050015;
         public static final int txtDesc=0x7f050006;
         public static final int txtTotal=0x7f050013;
+        public static final int txtVAnswer=0x7f050015;
+        public static final int txtVWelcome=0x7f05000d;
         public static final int txtWelcome=0x7f050005;
     }
     public static final class layout {
@@ -316,6 +317,7 @@ containing a value of this type.
          */
         public static final int common_signin_button_text_long=0x7f06000e;
         public static final int hello_world=0x7f060017;
+        public static final int imgHelp=0x7f060028;
         public static final int name_1=0x7f060018;
         public static final int name_2=0x7f060019;
         public static final int name_3=0x7f06001a;

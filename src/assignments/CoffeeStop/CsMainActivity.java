@@ -40,18 +40,21 @@ public class CsMainActivity extends Activity {
 		return true;
 	}
 	
+	//Initiates CsMapActivity
 	public void goToMapButtonClick(View v)
 	{
-		Intent I =new Intent(this, CsMapActivity.class);
-		this.startActivity(I);
+		Intent intent =new Intent(this, CsMapActivity.class);
+		this.startActivity(intent);
 	}
 	
+	//Initiates CsSurveyActivity
 	public void goToSurveyButtonClick(View v)
 	{
-		Intent I =new Intent(this, CsSurveyActivity.class);
-		this.startActivity(I);
+		Intent intent =new Intent(this, CsSurveyActivity.class);
+		this.startActivity(intent);
 	}
 	
+	//Opens HTTP connection and gets data from the given URL
 	private InputStream openHttpConnection(final URL url) throws IOException {
         InputStream in = null;
         int response = -1;
@@ -78,6 +81,7 @@ public class CsMainActivity extends Activity {
         return in;     
     }
 	
+	//Sets the Image view to the image downloaded.
 	private class DownloadImageTask extends AsyncTask<URL, Void, Bitmap> {
 		@Override
 		protected Bitmap doInBackground(URL... urls) {
@@ -91,6 +95,7 @@ public class CsMainActivity extends Activity {
 		}
     }
 	    
+	//Downloads the image from the given URL (if it finds any)
     private Bitmap downloadImage(final URL url) {
         Bitmap bitmap = null;
         InputStream in = null;        
