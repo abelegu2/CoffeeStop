@@ -15,12 +15,12 @@ import android.widget.Toast;
 
 public class CsSurveyActivity extends Activity{
 
-	static String shopName;
+	public static String shopName;
 	boolean contentChanged= false;
 	SurveyAnswers surveyAnswers = new SurveyAnswers();
-	DatabaseHelper dbHelper = new DatabaseHelper(CsSurveyActivity.this);
+	public DatabaseHelper dbHelper = new DatabaseHelper(CsSurveyActivity.this);
 	
-	//Saves shared preferences soon as it startsasdasd
+	//Saves shared preferences soon as it starts
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
@@ -137,7 +137,21 @@ public class CsSurveyActivity extends Activity{
 		    editor.putInt("envirQ", envirQ);
 		    editor.putString("name", shopName);
 		    
-		    editor.commit();			
+		    String check = isRadioButtonClicked();
+		    RadioButton r1 = (RadioButton)findViewById(R.id.btn1);
+			RadioButton r2 = (RadioButton)findViewById(R.id.btn2);
+			RadioButton r3 = (RadioButton)findViewById(R.id.btn3);
+			
+			if(r1.getText().equals(check)){
+				editor.putBoolean("radioButton", r1.isChecked());
+			}
+			else if(r2.getText().equals(check)){
+				editor.putBoolean("radioButton", r2.isChecked());
+			}
+			else{
+				editor.putBoolean("radioButton", r3.isChecked());
+			}
+		    editor.commit();
 		}		
 	}
 	
@@ -154,6 +168,20 @@ public class CsSurveyActivity extends Activity{
 		((RatingBar)findViewById(R.id.ratingBar3)).setProgress(musicQ);
 		((RatingBar)findViewById(R.id.ratingBar4)).setProgress(envirQ);
 		shopName = prefs.getString("name", "");
+		
+		RadioButton r1 = (RadioButton)findViewById(R.id.btn1);
+		RadioButton r2 = (RadioButton)findViewById(R.id.btn2);
+		RadioButton r3 = (RadioButton)findViewById(R.id.btn3);
+		
+		if(r1.getText().equals(shopName)){
+			r1.setChecked(true);
+		}
+		else if(r2.getText().equals(shopName)){
+			r2.setChecked(true);
+		}
+		else{
+			r3.setChecked(true);
+		}
 		
 	}
 	
